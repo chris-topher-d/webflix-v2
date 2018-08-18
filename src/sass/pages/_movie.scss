@@ -1,0 +1,54 @@
+.movie-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  overflow: auto;
+  padding-bottom: 50px;
+  position: relative;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+
+  .movie-poster img {
+    width: 300px;
+    height: auto;
+    margin-right: 50px;
+  }
+
+  .movie-info {
+    width: 500px;
+    color: $white;
+
+    #movie-title {
+      font-size: 2rem;
+      margin: 0 0 10px 0;
+    }
+
+    #rating {
+      font-size: 0.9rem;
+      margin: 15px 0;
+    }
+
+    #runtime {
+      font-size: 0.9rem;
+      margin: 15px 0;
+    }
+
+    #movie-cast {
+      display: flex;
+      font-size: 0.9rem;
+      margin: 15px 0;
+    }
+
+    #overview {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 300;
+      margin-top: 30px;
+    }
+  }
+}

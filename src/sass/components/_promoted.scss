@@ -1,0 +1,142 @@
+.promoted {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .fade-enter {
+    opacity: 0;
+  }
+
+  .fade-enter-active {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .fade-leave{
+    opacity: 1;
+  }
+
+  .fade-leave-active {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .fade-appear {
+    opacity: 0;
+  }
+
+  .fade-appear-active {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .promoted-movie {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .promoted-bg {
+      width: 100%;
+      height: 60vh;
+      background-color: #564d4d;
+      min-height: 350px;
+      position: absolute;
+      z-index: -1;
+      opacity: 0.65;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .gradient-bg {
+      width: 50%;
+      height: 100%;
+      min-width: 300px;
+      background: -moz-linear-gradient(90deg, rgba(34,31,31,1) 0%, rgba(255,255,255,0) 100%);
+      background: -webkit-linear-gradient(90deg, rgba(34,31,31,1) 0%, rgba(255,255,255,0) 100%);
+      background: linear-gradient(90deg, rgba(34,31,31,1) 0%, rgba(255,255,255,0) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#221f1f",endColorstr="#ffffff",GradientType=1);
+
+      .promoted-info {
+        height: 100%;
+        width: 50%;
+        min-width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: 25px;
+        color: $white;
+
+        #title {
+          font-size: 2rem;
+          margin: 0 0 10px 0;
+        }
+
+        #rating {
+          font-size: 0.9rem;
+          font-weight: bold;
+          margin: 5px 0;
+        }
+
+        #overview {
+          display: block;
+          font-size: 1.1rem;
+          font-weight: 300;
+          margin: 10px 0;
+        }
+
+        a {
+          text-decoration: none;
+
+          #movie-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: none;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border: 2px solid $red;
+            border-radius: 100px;
+            padding: 4px 15px 5px 15px;
+            margin-top: 5px;
+            outline: none;
+            cursor: pointer;
+
+            &:hover {
+              background: $red;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .movie-selector {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 10px;
+
+    .selector {
+      height: 5px;
+      width: 30px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 100px;
+      margin: 0 5px;
+      cursor: pointer;
+      opacity: .7;
+    }
+
+    .selected {
+      background: rgba(255, 255, 255, 0.75);
+    }
+  }
+}

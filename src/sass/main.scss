@@ -1,0 +1,18 @@
+@import 'helpers/variables';
+
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/layout';
+
+@import 'helpers/variables';
+
+@import 'components/spinner';
+@import 'components/home-slider';
+@import 'components/promoted';
+
+@import 'layout/header';
+@import 'layout/footer';
+
+@import 'pages/home';
+@import 'pages/movie';
+@import 'pages/search';

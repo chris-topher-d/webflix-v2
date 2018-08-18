@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  color: red;
+
+  a {
+    text-decoration: none;
+
+    h1 {
+      color: $red;
+    }
+  }
+
+  .search-bar {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid $white;
+    border-radius: 200px;
+    padding: 5px 15px;
+
+    #input {
+      width: 100%;
+      border: none;
+      background: transparent;
+      color: #fff;
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    .fa-search {
+      font-size: 17px;
+      color: #fff;
+      opacity: .7;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

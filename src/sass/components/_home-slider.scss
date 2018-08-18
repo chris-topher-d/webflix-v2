@@ -1,0 +1,170 @@
+.slider {
+  margin-top: 50px;
+  overflow: hidden;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+
+  p {
+   font-size: 1.7rem;
+   color: $white;
+   padding: 0 0 5px 25px;
+  }
+
+  .posters {
+    position: relative;
+    height: 350px;
+    width: 100%;
+    right: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: .2s ease-out;
+
+    .poster {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 2px;
+      transition: .2s ease-out;
+      transform-origin: center left;
+
+      img {
+        position: relative;
+        display: block;
+        height: 300px;
+        width: auto;
+        background-color: #564d4d;
+        transition: .2s;
+      }
+
+      a {
+        position: absolute;
+        text-decoration: none;
+
+        .fa-play {
+          font-size: 35px;
+          color: #fff;
+          padding: 15px 15px 15px 20px;
+          border: 5px solid #fff;
+          border-radius: 50%;
+          box-sizing: border-box;
+          display: none;
+          transition: .1s ease-in-out;
+          opacity: .3;
+          cursor: pointer;
+
+          &:hover {
+            color: #ff0000;
+            -webkit-transform: translateZ(0) rotate(0.0001deg) scale(1.1);
+            transform: translateZ(0) rotate(0.0001deg) scale(1.1);
+            opacity: 1;
+          }
+        }
+      }
+
+      &:hover > a .fa-play {
+        display: block;
+        -webkit-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.3);
+        -moz-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.3);
+        box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.3);
+      }
+    }
+
+    .arrows {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      visibility: hidden;
+      height: 350px;
+      z-index: 100;
+
+      .arrow-block-left {
+        position: absolute;
+        left: 50px;
+        z-index: 100;
+        height: 350px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(34, 31, 31, .7);
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        transition: .2s ease-in-out;
+
+        .fa-angle-left {
+          left: 0;
+          color: #fff;
+          font-size: 70px;
+          z-index: 100;
+          opacity: .7;
+          cursor: pointer;
+        }
+
+        &:hover > .fa-angle-left {
+          opacity: 1;
+        }
+      }
+
+      .arrow-block-right {
+        position: absolute;
+        right: -150px;
+        z-index: 100;
+        height: 350px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(34, 31, 31, .7);
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        transition: .15s ease-in-out;
+
+        .fa-angle-right {
+          right: 0;
+          color: #fff;
+          font-size: 70px;
+          z-index: 100;
+          opacity: .7;
+          cursor: pointer;
+        }
+
+        &:hover > .fa-angle-right {
+          opacity: 1;
+        }
+      }
+    }
+
+    &:hover {
+      transform: translate3d(-16px, 0, 0);
+    }
+
+    &:hover > .poster {
+      &:hover {
+        transform: scale(1.16);
+      }
+
+      &:hover ~ .poster {
+        transform: translate3d(32px, 0, 0);
+      }
+    }
+
+    &:hover > .arrows {
+      visibility: visible;
+    }
+
+    &:hover > .arrows > .arrow-block-left {
+      left: 116px;
+    }
+
+    &:hover > .arrows > .arrow-block-right {
+      right: -116px;
+    }
+  }
+}
