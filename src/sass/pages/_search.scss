@@ -12,15 +12,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 50px;
+    margin: 50px 100px;
 
     .movie-result {
       display: flex;
       justify-content: center;
       align-items: center;
       box-sizing: border-box;
-      height: 350px;
-      width: 250px;
+      height: 348px;
+      width: 232px;
 
       .poster {
         display: flex;
@@ -29,7 +29,8 @@
         position: relative;
         height: 300px;
         width: 200px;
-        transition: .15s;
+        background: $lightGray;
+        transition: .2s;
 
         img {
           height: 100%;
@@ -62,8 +63,7 @@
         }
 
         &:hover {
-          height: 350px;
-          width: 233px;
+          transform: scale(1.16);
         }
 
         &:hover > a .fa-play {
