@@ -6,6 +6,7 @@ import {
   FETCH_MOVIE,
   FETCH_CAST,
   FETCH_SEARCH,
+  CLEAR_SEARCH,
   FETCH_ERROR,
   CLEAR_PAGE
 } from './types';
@@ -142,6 +143,14 @@ export const handleSearch = (searchValue) => dispatch => {
         payload: err.response.data
       })
     });
+}
+
+// Clear Search Results page
+export const clearSearch = () => dispatch => {
+  dispatch({
+    type: CLEAR_SEARCH,
+    payload: []
+  });
 }
 
 // Clear page

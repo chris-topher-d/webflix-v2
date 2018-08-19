@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { handleSearch } from '../../actions/actions';
+import { handleSearch, clearSearch } from '../../actions/actions';
 import { Link, withRouter } from 'react-router-dom';
 
 class Header extends Component {
@@ -24,6 +24,7 @@ class Header extends Component {
 
   handleClick = () => {
     if (this.state.value !== '') {
+      this.props.clearSearch();
       this.props.handleSearch(this.state.value);
 
       this.setState({
@@ -55,7 +56,8 @@ class Header extends Component {
 }
 
 Header.propTypes = {
-  handleSearch: PropTypes.func.isRequired
+  handleSearch: PropTypes.func.isRequired,
+  clearSearch: PropTypes.func.isRequired
 };
 
-export default connect(null, { handleSearch })(withRouter(Header));
+export default connect(null, { handleSearch, clearSearch })(withRouter(Header));
