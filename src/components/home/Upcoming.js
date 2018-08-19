@@ -33,7 +33,7 @@ class Upcoming extends Component {
         let poster = 'https://image.tmdb.org/t/p/w500' + movie.poster_path;
         return (
           <div className='poster' key={movie.id}>
-            <img src={poster} alt='movie poster'/>
+            <img src={poster} alt={movie.title}/>
             <Link to={{ pathname: '/movie', state: { id: `${movie.id}` }}}><i className="fas fa-play"></i></Link>
           </div>
         );
