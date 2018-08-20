@@ -17,7 +17,6 @@ const searchUrl = 'https://api.themoviedb.org/3/search/movie?';
 
 // Fetch Promoted content
 export const fetchPromoted = () => dispatch => {
-  // dispatch(promotedLoading());
   fetch(`${url}popular?api_key=${api}&language=en-US&page=1`)
     .then(response => response.json())
     .then(data =>
@@ -36,7 +35,6 @@ export const fetchPromoted = () => dispatch => {
 
 // Fetch Upcoming movies
 export const fetchUpcoming = () => dispatch => {
-  // dispatch(upcomingLoading());
   fetch(`${url}upcoming?api_key=${api}&language=en-US&page=1`)
     .then(response => response.json())
     .then(data =>
@@ -55,7 +53,6 @@ export const fetchUpcoming = () => dispatch => {
 
 // Fetch Popular movies
 export const fetchPopular = () => dispatch => {
-  // dispatch(popularLoading());
   fetch(`${url}popular?api_key=${api}&language=en-US&page=1`)
     .then(response => response.json())
     .then(data =>
@@ -74,7 +71,6 @@ export const fetchPopular = () => dispatch => {
 
 // Fetch Top Rated movies
 export const fetchTopRated = () => dispatch => {
-  // dispatch(topRatedLoading());
   fetch(`${url}top_rated?api_key=${api}&language=en-US&page=1`)
     .then(response => response.json())
     .then(data =>
