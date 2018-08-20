@@ -11,20 +11,17 @@ class Promoted extends Component {
     this.state = {
       currentSlide: 0
     }
-
-    this.handleSelect = this.handleSelect.bind(this);
   }
 
   componentDidMount() {
-    let th = this;
-    setInterval(function() {
-      th.slider();
+    this.interval = setInterval(() => {
+      this.slider();
     }, 15000);
   }
 
-  // componentWillUnmount() {
-  //   this.props.clearPage();
-  // }
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
 
   slider() {
     let slide = this.state.currentSlide;
@@ -33,7 +30,7 @@ class Promoted extends Component {
     this.setState({currentSlide: slide});
   }
 
-  handleSelect(e) {
+  handleSelect = (e) => {
     this.setState({currentSlide: Number(e.target.id)})
   }
 
