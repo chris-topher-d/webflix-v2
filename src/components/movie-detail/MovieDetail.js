@@ -34,9 +34,7 @@ class MovieDetail extends Component {
     });
 
     if (movie.loading || cast.loading) {
-      movieDetails = (
-        <Spinner />
-      );
+      movieDetails = <Spinner />;
     } else {
       movieDetails = (
         <div className='movie-container'>

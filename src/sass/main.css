@@ -136,16 +136,14 @@ body {
         justify-content: center;
         align-items: center;
         background: rgba(34, 31, 31, 0.7);
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
+        cursor: pointer;
         transition: .2s ease-out; }
         .slider .posters .arrows .arrow-block-left .fa-angle-left {
           left: 0;
           color: #fff;
           font-size: 70px;
           z-index: 100;
-          opacity: .7;
-          cursor: pointer; }
+          opacity: .7; }
         .slider .posters .arrows .arrow-block-left:hover > .fa-angle-left {
           opacity: 1; }
       .slider .posters .arrows .arrow-block-right {
@@ -158,16 +156,14 @@ body {
         justify-content: center;
         align-items: center;
         background: rgba(34, 31, 31, 0.7);
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
+        cursor: pointer;
         transition: .2s ease-out; }
         .slider .posters .arrows .arrow-block-right .fa-angle-right {
           right: 0;
           color: #fff;
           font-size: 70px;
           z-index: 100;
-          opacity: .7;
-          cursor: pointer; }
+          opacity: .7; }
         .slider .posters .arrows .arrow-block-right:hover > .fa-angle-right {
           opacity: 1; }
     .slider .posters:hover {

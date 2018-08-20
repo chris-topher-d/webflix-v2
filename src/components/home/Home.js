@@ -22,11 +22,7 @@ class Home extends Component {
     let homeContent;
 
     if (promotedLoading || upcomingLoading || popularLoading || topRatedLoading) {
-      homeContent = (
-        <div>
-          <Spinner />
-        </div>
-      );
+      homeContent = <Spinner />;
     } else {
       homeContent = (
         <div>
