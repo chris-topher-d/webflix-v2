@@ -138,7 +138,7 @@ body {
         background: rgba(34, 31, 31, 0.7);
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
-        transition: .2s ease-in-out; }
+        transition: .2s ease-out; }
         .slider .posters .arrows .arrow-block-left .fa-angle-left {
           left: 0;
           color: #fff;
@@ -160,7 +160,7 @@ body {
         background: rgba(34, 31, 31, 0.7);
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
-        transition: .15s ease-in-out; }
+        transition: .2s ease-out; }
         .slider .posters .arrows .arrow-block-right .fa-angle-right {
           right: 0;
           color: #fff;

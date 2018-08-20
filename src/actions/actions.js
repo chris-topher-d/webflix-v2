@@ -6,9 +6,10 @@ import {
   FETCH_MOVIE,
   FETCH_CAST,
   FETCH_SEARCH,
-  CLEAR_SEARCH,
   FETCH_ERROR,
-  CLEAR_PAGE
+  CLEAR_SEARCH,
+  CLEAR_PAGE,
+  CLEAR_CAST
 } from './types';
 import { api } from '../apiKey';
 
@@ -153,6 +154,13 @@ export const clearSearch = () => dispatch => {
 export const clearPage = () => dispatch => {
   dispatch({
     type: CLEAR_PAGE,
+    payload: []
+  });
+}
+
+export const clearCast = () => dispatch => {
+  dispatch({
+    type: CLEAR_CAST,
     payload: []
   });
 }

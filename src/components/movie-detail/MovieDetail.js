@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchMovie, fetchCast, clearPage } from '../../actions/actions';
+import { fetchMovie, fetchCast, clearPage, clearCast } from '../../actions/actions';
 
 import Spinner from '../common/Spinner';
 
@@ -20,6 +20,7 @@ class MovieDetail extends Component {
 
   componentWillUnmount() {
     this.props.clearPage();
+    this.props.clearCast();
   }
 
   render() {
@@ -67,13 +68,13 @@ MovieDetail.propTypes = {
   cast: PropTypes.object.isRequired,
   fetchMovie: PropTypes.func.isRequired,
   fetchCast: PropTypes.func.isRequired,
-  clearPage: PropTypes.func.isRequired
+  clearPage: PropTypes.func.isRequired,
+  clearCast: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
   movie: state.movie,
-  // movieLoading: state.movie.loading,
   cast: state.cast
 });
 
-export default connect(mapStateToProps, { fetchMovie, fetchCast, clearPage })(MovieDetail);
+export default connect(mapStateToProps, { fetchMovie, fetchCast, clearPage, clearCast })(MovieDetail);

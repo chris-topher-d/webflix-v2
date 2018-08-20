@@ -1,4 +1,4 @@
-import { FETCH_CAST, FETCH_ERROR } from '../actions/types';
+import { FETCH_CAST, FETCH_ERROR, CLEAR_CAST } from '../actions/types';
 
 const initialState = {
   details: [],
@@ -11,6 +11,12 @@ export default function(state = initialState, action) {
       return {
         details: action.payload,
         loading: false
+      };
+
+    case CLEAR_CAST:
+      return {
+        details: action.payload,
+        loading: true
       };
 
     case FETCH_ERROR:

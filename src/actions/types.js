@@ -8,6 +8,7 @@ export const FETCH_SEARCH = 'FETCH_SEARCH';
 export const FETCH_ERROR = 'FETCH_ERROR';
 export const CLEAR_PAGE = 'CLEAR_PAGE';
 export const CLEAR_SEARCH = 'CLEAR_SEARCH';
+export const CLEAR_CAST = 'CLEAR_CAST';
 export const PROMOTED_LOADING = 'PROMOTED_LOADING';
 export const UPCOMING_LOADING = 'UPCOMING_LOADING';
 export const POPULAR_LOADING = 'POPULAR_LOADING';
