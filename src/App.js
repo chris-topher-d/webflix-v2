@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import store from './store/store';
 
 import Header from './components/layout/Header';
@@ -34,6 +34,7 @@ class App extends Component {
                 />
                 <Route exact path={'/movie'} component={Movie} />
                 <Route exact path={'/search'} component={Search} />
+                <Redirect to='/' />
               </Switch>
               <Footer />
             </div>
