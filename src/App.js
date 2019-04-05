@@ -34,7 +34,7 @@ class App extends Component {
                 />
                 <Route exact path={'/movie'} component={Movie} />
                 <Route exact path={'/search'} component={Search} />
-                <Redirect to='/' />
+                <Redirect to='/webflix' />
               </Switch>
               <Footer />
             </div>
